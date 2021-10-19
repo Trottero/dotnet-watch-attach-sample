@@ -1,5 +1,13 @@
 {
   "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "terminatewatchparam",
+      "type": "command",
+      "command": "workbench.action.tasks.terminate",
+      "args": "watch"
+    }
+  ],
   "tasks": [
     {
       "label": "watch",
@@ -14,6 +22,12 @@
       ],
       "problemMatcher": "$msCompile",
       "isBackground": true
+    },
+    {
+      "label": "terminatewatch",
+      "type": "shell",
+      "command": "echo ${input:terminatewatchparam}",
+      "problemMatcher": []
     }
   ]
 }

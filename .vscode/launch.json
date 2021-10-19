@@ -2,11 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": ".NET Core Attach",
-      "type": "coreclr",
+      "type": "dotnetwatchattach",
+      "request": "launch",
+      "name": ".NET Watch Attach",
+      "args": {
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      },
       "preLaunchTask": "watch",
-      "request": "attach",
-      "processName": "weather.exe"
+      "postDebugTask": "terminatewatch",
+      "program": "weather.exe"
     }
   ]
 }
