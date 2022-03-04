@@ -10,8 +10,7 @@
           "ASPNETCORE_ENVIRONMENT": "Development"
         }
       },
-      "preLaunchTask": "watch",
-      "postDebugTask": "terminatewatch",
+      "task": "watch",
       "program": "weather.exe"
     }
   ]

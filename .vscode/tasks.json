@@ -20,8 +20,7 @@
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
-      "problemMatcher": "$msCompile",
-      "isBackground": true
+      "problemMatcher": "$msCompile"
     },
     {
       "label": "terminatewatch",
