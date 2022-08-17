@@ -1,18 +1,18 @@
 {
   "version": "2.0.0",
-  "inputs": [
-    {
-      "id": "terminatewatchparam",
-      "type": "command",
-      "command": "workbench.action.tasks.terminate",
-      "args": "watch"
-    }
-  ],
   "tasks": [
     {
       "label": "watch",
       "command": "dotnet",
       "type": "process",
+      "linux": {
+        "options": {
+          "env": {
+            // The FileSystemWatcher used by default wasnt working for me on linux, so I switched to the polling watcher.
+            "DOTNET_USE_POLLING_FILE_WATCHER": "true"
+          }
+        }
+      },
       "args": [
         "watch",
         "run",
@@ -21,12 +21,6 @@
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
-    },
-    {
-      "label": "terminatewatch",
-      "type": "shell",
-      "command": "echo ${input:terminatewatchparam}",
-      "problemMatcher": []
     }
   ]
 }

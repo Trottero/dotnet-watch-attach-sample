@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "windows": {
+        "program": "weather.exe"
+      },
+      "linux": {
+        "program": "weather"
+      },
+
       "type": "dotnetwatchattach",
       "request": "launch",
       "name": ".NET Watch Attach",
